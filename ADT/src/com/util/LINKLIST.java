@@ -1,6 +1,6 @@
 package com.util;
 
-public class LINKLIST_OPERATE {
+public class LINKLIST {
 
 	public static TNode BUILD_LinkList(int listArray[]){
 		TNode root = new TNode(listArray[0]);
@@ -13,5 +13,15 @@ public class LINKLIST_OPERATE {
 		}
 		 
 		return root;
+	}
+	
+	public static void PRINT_List(TNode head) {
+		TNode cur = head;
+		System.out.println("----------------------");
+		while(cur != null) {
+			System.out.print(cur.val + " ");
+			cur = cur.next;
+		}
+		System.out.println("\n----------------------");
 	}
 }
