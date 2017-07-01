@@ -4,6 +4,7 @@ package com.util;
  * 二叉树相关操作
  */
 public class TREE {
+	
 	private static int[] treeArray;
 	
 	/**
@@ -28,7 +29,5 @@ public class TREE {
 		childRoot.right = buildTree(2 * index + 2);
 		return childRoot;
 	}
-	
-	
 	
 }
