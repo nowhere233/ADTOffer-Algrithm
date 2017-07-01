@@ -1,13 +1,16 @@
 package com.util;
 
+/*
+ * 树的结点
+ */
 public class TNode {
 	public int val;
-	public TNode next;
+	public TNode left;
+	public TNode right;
 	public TNode(int val) {
 		super();
 		this.val = val;
-		this.next = null;
+		this.left = null;
+		this.right = null;
 	}
-	
-	
 }

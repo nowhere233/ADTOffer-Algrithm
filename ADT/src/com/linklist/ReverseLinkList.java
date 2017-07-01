@@ -1,16 +1,16 @@
 package com.linklist;
 
 import com.util.LINKLIST;
-import com.util.TNode;
+import com.util.LNode;
 
 /*
  * 给定链表头指针head，将该链表逆序后返回头结点
  */
 public class ReverseLinkList {
  
-	public static TNode  reverseNoHead(TNode head) {
+	public static LNode  reverseNoHead(LNode head) {
 		if(head == null) return null;
-		TNode cur = head.next,tmp;
+		LNode cur = head.next,tmp;
 		head.next = null;
 		while(cur != null) {
 			tmp = cur.next;
@@ -23,7 +23,7 @@ public class ReverseLinkList {
 	
 	public static void main(String[] args) {
 		int[] a = new int[]{1,2,3,4};
-		TNode head = LINKLIST.BUILD_LinkList(a);
+		LNode head = LINKLIST.BUILD_LinkList(a);
 		//LINKLIST.PRINT_List(head);
 		head = ReverseLinkList.reverseNoHead(head);
 		LINKLIST.PRINT_List(head);

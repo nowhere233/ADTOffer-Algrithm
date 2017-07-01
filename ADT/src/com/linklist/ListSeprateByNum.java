@@ -1,18 +1,18 @@
 package com.linklist;
 
 import com.util.LINKLIST;
-import com.util.TNode;
+import com.util.LNode;
 
 /*
  * 给定Num，将链表中大于Num的放在右边，小于num的结点放在num结点左侧
  */
 public class ListSeprateByNum {
 	
-	public static TNode separateList(TNode head,int num) {
+	public static LNode separateList(LNode head,int num) {
 		if(head == null) return null;
-		TNode leftHead = null,leftRear = null,numHead = null,numRear = null;
-		TNode rightHead = null,rightRear = null;
-		TNode cur = head,tmp,rear = null;
+		LNode leftHead = null,leftRear = null,numHead = null,numRear = null;
+		LNode rightHead = null,rightRear = null;
+		LNode cur = head,tmp,rear = null;
 		while(cur != null) {
 			tmp = cur.next;
 			//处理大于num的结点放在右链表
@@ -83,7 +83,7 @@ public class ListSeprateByNum {
 	
 	public static void main(String[] args) {
 		int[] a = new int[]{3,8,1,4,2,5,9,10,6};
-		TNode head = LINKLIST.BUILD_LinkList(a);
+		LNode head = LINKLIST.BUILD_LinkList(a);
 		//LINKLIST.PRINT_List(head);
 		head = ListSeprateByNum.separateList(head, 5);
 		LINKLIST.PRINT_List(head);

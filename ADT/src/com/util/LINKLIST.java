@@ -2,12 +2,12 @@ package com.util;
 
 public class LINKLIST {
 
-	public static TNode BUILD_LinkList(int listArray[]){
-		TNode root = new TNode(listArray[0]);
-		TNode pre = root,now;
+	public static LNode BUILD_LinkList(int listArray[]){
+		LNode root = new LNode(listArray[0]);
+		LNode pre = root,now;
 		
 		for (int i = 1; i < listArray.length; i++) {
-			now = new TNode(listArray[i]);
+			now = new LNode(listArray[i]);
 			pre.next = now;
 			pre = now;
 		}
@@ -15,8 +15,8 @@ public class LINKLIST {
 		return root;
 	}
 	
-	public static void PRINT_List(TNode head) {
-		TNode cur = head;
+	public static void PRINT_List(LNode head) {
+		LNode cur = head;
 		System.out.println("----------------------");
 		if(head == null) System.out.println("空");
 		while(cur != null) {
@@ -26,3 +26,4 @@ public class LINKLIST {
 		System.out.println("\n----------------------");
 	}
 }
+
