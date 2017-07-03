@@ -14,6 +14,7 @@ public class TraversePreOrder {
 	
 	//先序遍历
 	public void preTraverseTree(TNode root) {
+		if(root == null) return;
 		TNode node;
 		stack.push(root);
 		while(!stack.isEmpty()) {
