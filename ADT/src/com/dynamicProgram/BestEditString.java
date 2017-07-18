@@ -8,20 +8,20 @@ package com.dynamicProgram;
 public class BestEditString {
 	
 	public static int findMinCost(String A, int n, String B, int m, int ca, int cd, int cr) {
-		  int[][] dp = new int[300][300];
+		  int[][] dp = new int[300][300]; //dp[i][j] 代表将从A[0]-->A[i-1]的字符串转化成 B[0]-->B[i-1]的字符串最小代价
 		  for (int i = 0; i < n + 1; i++)
 		  {
 			  dp[i] = new int[m + 1];
 		  }
 		  //初始化矩阵
 		  dp[0][0] = 0;
-		  for (int i = 1; i < m + 1; i++)
+		  for (int j = 1; j < m + 1; j++)
 		  {
-			  dp[0][i] =ca*i ;//没有装入物体时，就没有价值了
+			  dp[0][j] =ca * j ;//A从空串转化成B[]
 		  }
-		  for (int j = 1; j< n + 1; j++)
-		  {
-			  dp[j][0] = cd*j;//不能承载重量时，则不能装物体
+		  for (int i = 1; i< n + 1; i++)
+		  { 
+			  dp[i][0] = cd * i;//不能承载重量时，则不能装物体
 		  }
 		  for (int i = 1; i < n + 1; i++)
 		  {
